@@ -15,7 +15,7 @@ quadruple x = double (double x)
 
 
 -- Ex.4
---distance :: Double -> Double -> Double -> Double -> Double
+distance :: Double -> Double -> Double -> Double -> Double
 distance x1 y1 x2 y2 = sqrt(square (x1 - x2) + square (y1 - y2))
 
 square x = x * x
