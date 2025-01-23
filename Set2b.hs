@@ -8,8 +8,8 @@ binomial n k = (binomial (n - 1) k) + (binomial (n - 1) (k - 1))
 oddFactorial :: Integer -> Integer
 oddFactorial n
     | n == 1 = 1 
-    | not (odd n) = 1 * oddFactorial (n - 1)
-    | odd n = n * oddFactorial (n - 1) 
+    | even n = 1 * oddFactorial (n - 1)
+    | odd n  = n * oddFactorial (n - 1) 
 
 -- Ex 3
 myGcd :: Integer -> Integer -> Integer  
