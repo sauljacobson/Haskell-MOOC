@@ -31,12 +31,12 @@ palindromify str
 -- Ex 7
 safeDiv :: Integer -> Integer -> Maybe Integer
 safeDiv _ 0 = Nothing
-safeDiv x y = x `div` y 
+safeDiv x y = Just (x `div` y) 
 
 -- Ex 8 
 greet :: String -> Maybe String -> String 
-greet first Nothing = "Hello," ++ first ++ '!'
-greet first (Just last) = "Hello, " ++ first ++ last ++ '!'
+greet first Nothing = "Hello, " ++ first ++ "!"
+greet first (Just last) = "Hello, " ++ first ++ " " ++ last ++ "!"
 
 -- Ex 9 
 safeIndex :: [a] -> Int -> Maybe a 
@@ -48,7 +48,7 @@ safeIndex list index
 -- Ex 10 
 eitherDiv :: Integer -> Integer -> Either String Integer
 eitherDiv x 0 = Left (show x ++ "/" ++ show 0)  
-eitherDiv x y = Right x `div` y
+eitherDiv x y = Right (x `div` y)
 
 -- Ex 11 
 addEithers :: Either String Int -> Either String Int -> Either String Int
